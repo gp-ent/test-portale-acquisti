@@ -1,6 +1,8 @@
-image:  docker-registry.default.svc:5000/tasktracker-dev/portale-acquisti-cdp:0.0.1-SNAPSHOT
+image: docker-registry.default.svc:5000/tasktracker-dev/portale-acquisti-cdp:0.0.1-SNAPSHOT
 dbms: postgresql
 healthCheckPath: "/management/health"
+deploymentBaseName: portale-acquisti-cdp
+ingressPath: "/portale-acquisti-cdp"
 roles:
   - "PortaleAcquistiCdp-admin"
 # entando-needle-descriptor-add-roles - Entando blueprint will add roles here
