@@ -1,4 +1,4 @@
-image:  docker-registry.default.svc:5000/innova-portale-acquisti-stage/portale-acquisti-cdp:latest
+image: docker-registry.default.svc:5000/innova-portale-acquisti-stage/cdp-acquisti-be:latest
 dbms: postgresql
 healthCheckPath: "/management/health"
 deploymentBaseName: portale-acquisti-cdp
