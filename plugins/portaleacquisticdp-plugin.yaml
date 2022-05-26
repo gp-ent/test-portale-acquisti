@@ -1,4 +1,4 @@
-image: keybiz/portale-acquisti-cdp:0.0.1-SNAPSHOT
+image:  docker-registry.default.svc:5000/tasktracker-dev/portale-acquisti-cdp:0.0.1-SNAPSHOT
 dbms: postgresql
 healthCheckPath: "/management/health"
 roles:
