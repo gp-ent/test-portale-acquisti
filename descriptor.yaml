@@ -1,0 +1,10 @@
+code: portaleacquisticdp-bundle
+description: This is the PortaleAcquistiCdp bundle
+
+components:
+  plugins:
+    - plugins/portaleacquisticdp-plugin.yaml
+
+  widgets:
+# entando-needle-descriptor-add-widgets - Entando blueprint will add widget bundle files here
+
