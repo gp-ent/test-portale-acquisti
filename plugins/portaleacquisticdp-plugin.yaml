@@ -1,8 +1,21 @@
 image: docker-registry.default.svc:5000/innova-portale-acquisti-stage/cdp-acquisti-be:latest
-dbms: postgresql
+dbms: none
 healthCheckPath: "/management/health"
 deploymentBaseName: portale-acquisti-cdp
 ingressPath: "/portale-acquisti-cdp"
 roles:
   - "PortaleAcquistiCdp-admin"
 # entando-needle-descriptor-add-roles - Entando blueprint will add roles here
+connectionConfigNames:
+  - "test-secret"
+environmentVariables:
+ - name: SPRING_DATASOURCE_URL
+   value: test123
+ - name: PSQL_CONNECTION
+   secretKeyRef:
+    name: test-configmap
+    key: PSQL_CONNECTION
+ - name: PSQL_PASSWORD
+   secretKeyRef:
+     name: test-secret
+     key: PSQL_PASSWORD
