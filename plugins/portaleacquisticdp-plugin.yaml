@@ -1,3 +1,4 @@
+descriptor: v4
 image: docker-registry.default.svc:5000/innova-portale-acquisti-stage/cdp-acquisti-be:latest
 dbms: none
 healthCheckPath: "/management/health"
