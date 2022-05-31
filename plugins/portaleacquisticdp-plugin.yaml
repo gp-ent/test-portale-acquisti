@@ -1,6 +1,6 @@
-descriptor: v4
+descriptorVersion: v4
 image: docker-registry.default.svc:5000/innova-portale-acquisti-stage/cdp-acquisti-be:latest
-dbms: none
+dbms: postgresql
 healthCheckPath: "/management/health"
 deploymentBaseName: portale-acquisti-cdp
 ingressPath: "/portale-acquisti-cdp"
@@ -10,15 +10,9 @@ roles:
 connectionConfigNames:
   - "test-secret"
 environmentVariables:
- - name: SPRING_DATASOURCE_URL
-   value: test123
- - name: PSQL_CONNECTION
-   secretKeyRef:
-    name: test-configmap
-    key: PSQL_CONNECTION
- - name: TOP_LOL
-   value: eh
- - name: PSQL_PASSWORD
+ - name: TEST_ENV_VAR
+   value: test.env.1234
+ - name: TEST_SECRET
    secretKeyRef:
      name: test-secret
-     key: PSQL_PASSWORD
+     key: MY_SECRET_KEY
