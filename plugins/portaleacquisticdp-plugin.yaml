@@ -1,5 +1,5 @@
 image: docker-registry.default.svc:5000/innova-portale-acquisti-stage/cdp-acquisti-be:latest
-dbms: postgresql
+dbms: none
 healthCheckPath: "/management/health"
 deploymentBaseName: portale-acquisti-cdp
 ingressPath: "/portale-acquisti-cdp"
@@ -15,6 +15,8 @@ environmentVariables:
    secretKeyRef:
     name: test-configmap
     key: PSQL_CONNECTION
+ - name: TOP_LOL
+   value: eh
  - name: PSQL_PASSWORD
    secretKeyRef:
      name: test-secret
