@@ -1,5 +1,5 @@
 descriptorVersion: v4
-image: docker-registry.default.svc:5000/tasktracker-dev/test:1.1.1
+image: docker-registry.default.svc:5000/tasktracker-dev/test:latest
 dbms: postgresql
 healthCheckPath: "/management/health"
 deploymentBaseName: test-latest
