@@ -1,7 +1,9 @@
 descriptorVersion: v4
 image: docker-registry.default.svc:5000/tasktracker-dev/test:latest
 dbms: postgresql
+healthCheckPath: "/management/health"
 deploymentBaseName: test-latest
+ingressPath: "/test-latest"
 roles:
   - "TestLatest-admin"
 # entando-needle-descriptor-add-roles - Entando blueprint will add roles here
