@@ -1,14 +1,10 @@
 descriptorVersion: v4
-image: docker-registry.default.svc:5000/innova-portale-acquisti-stage/cdp-acquisti-be:latest
+image: docker-registry.default.svc:5000/tasktracker-dev/test:latest
 dbms: postgresql
-healthCheckPath: "/management/health"
-deploymentBaseName: portale-acquisti-cdp
-ingressPath: "/portale-acquisti-cdp"
+deploymentBaseName: test-latest
 roles:
-  - "PortaleAcquistiCdp-admin"
+  - "TestLatest-admin"
 # entando-needle-descriptor-add-roles - Entando blueprint will add roles here
-connectionConfigNames:
-  - "test-secret"
 environmentVariables:
  - name: TEST_ENV_VAR
    value: test.env.1234

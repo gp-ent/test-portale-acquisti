@@ -1,5 +1,5 @@
-code: portaleacquisticdp-bundle
-description: This is the PortaleAcquistiCdp bundle
+code: test-latest-bundle
+description: Test latest bundle
 
 components:
   plugins:
