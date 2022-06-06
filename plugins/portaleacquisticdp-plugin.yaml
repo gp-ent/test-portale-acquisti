@@ -9,7 +9,7 @@ roles:
 # entando-needle-descriptor-add-roles - Entando blueprint will add roles here
 environmentVariables:
  - name: TEST_ENV_VAR
-   value: test.env.1234
+   value: cambiami
  - name: TEST_SECRET
    secretKeyRef:
      name: test-secret
